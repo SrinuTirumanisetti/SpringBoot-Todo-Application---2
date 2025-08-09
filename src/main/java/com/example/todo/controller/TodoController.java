@@ -1,12 +1,4 @@
-/*
- * You can use the following import statements
- *
- * import org.springframework.beans.factory.annotation.Autowired;
- * import org.springframework.web.bind.annotation.*;
- * import java.util.*;
- */
 
-// Write your code here
 package com.example.todo.controller;
 
 import com.example.todo.model.Todo;
@@ -23,5 +15,10 @@ public class TodoController{
     @GetMapping("/todos")
     public List<Todo> getTodoList(){
         return service.getTodoList();
+    }
+
+    @PostMapping("/todos")
+    public Todo addTodo(@RequestBody Todo todo){
+        return service.addTodo(todo);
     }
 }
