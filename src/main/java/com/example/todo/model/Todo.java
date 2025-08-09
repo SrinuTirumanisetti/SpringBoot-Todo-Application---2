@@ -1,4 +1,3 @@
-
 package com.example.todo.model;
 
 public class Todo {
@@ -6,6 +5,9 @@ public class Todo {
     private String todo;
     private String status;
     private String priority;
+
+    public Todo() {
+    }
 
     public Todo(int id, String todo, String status, String priority) {
         this.id = id;
