@@ -7,4 +7,5 @@ public interface TodoRepository{
     List<Todo> getTodoList();
     Todo addTodo(Todo todo);
     Todo getTodoById(int id);
+    Todo updateTodo(int id,Todo todo);
 }
