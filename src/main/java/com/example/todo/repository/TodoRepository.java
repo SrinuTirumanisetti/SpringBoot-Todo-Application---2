@@ -6,4 +6,5 @@ import com.example.todo.model.Todo;
 public interface TodoRepository{
     List<Todo> getTodoList();
     Todo addTodo(Todo todo);
+    Todo getTodoById(int id);
 }

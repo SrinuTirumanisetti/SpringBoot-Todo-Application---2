@@ -39,4 +39,15 @@ public class TodoH2Service implements TodoRepository{
         return savedTodo;
     }
 
+    @Override
+    public Todo getTodoById(int id){
+        try{
+            Todo todo = db.queryForObject("SELECT * FROM TODOLIST WHERE id=?",new TodoRowMapper(),id);
+            return todo;
+        }
+        catch(Exception e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
 }
